@@ -16,8 +16,8 @@ gem 'puma', '~> 4.1'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
+# customs gems
+gem 'httparty'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
@@ -35,5 +35,12 @@ group :development do
   gem 'spring'
 end
 
+group :test do
+  gem 'webmock'
+  gem 'rubocop-rspec'
+  gem 'factory_bot_rails'
+  gem 'database_cleaner'
+  # gem 'faker'
+end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
